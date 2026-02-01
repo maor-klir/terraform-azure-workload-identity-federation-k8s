@@ -47,25 +47,26 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_akv_azwi_location"></a> [akv\_azwi\_location](#input\_akv\_azwi\_location) | Azure Key Vault for Azure Workload Identity location | `string` | `"West Europe"` | no |
 | <a name="input_akv_azwi_name"></a> [akv\_azwi\_name](#input\_akv\_azwi\_name) | Azure Key Vault for Azure Workload Identity name | `string` | n/a | yes |
 | <a name="input_azure_subscription_id"></a> [azure\_subscription\_id](#input\_azure\_subscription\_id) | Azure Subscription ID | `string` | n/a | yes |
 | <a name="input_azwi_rg"></a> [azwi\_rg](#input\_azwi\_rg) | Azure Workload Identity resource group name | `string` | n/a | yes |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment name (qa, prod) | `string` | n/a | yes |
-| <a name="input_oidc_rg"></a> [oidc\_rg](#input\_oidc\_rg) | OIDC issuer resource group name | `string` | n/a | yes |
-| <a name="input_oidc_storage_account"></a> [oidc\_storage\_account](#input\_oidc\_storage\_account) | OIDC issuer storage account name | `string` | n/a | yes |
-| <a name="input_workload_identity_public_key_pem"></a> [workload\_identity\_public\_key\_pem](#input\_workload\_identity\_public\_key\_pem) | Workload identity service account public key in PEM format | `string` | n/a | yes |
-| <a name="input_akv_azwi_location"></a> [akv\_azwi\_location](#input\_akv\_azwi\_location) | Azure Key Vault for Azure Workload Identity location | `string` | `"West Europe"` | no |
 | <a name="input_azwi_rg_location"></a> [azwi\_rg\_location](#input\_azwi\_rg\_location) | Azure Workload Identity resource group location | `string` | `"West Europe"` | no |
 | <a name="input_azwi_service_account_name"></a> [azwi\_service\_account\_name](#input\_azwi\_service\_account\_name) | Kubernetes service account name for Azure Workload Identity | `string` | `"workload-identity-sa"` | no |
 | <a name="input_azwi_service_account_namespace"></a> [azwi\_service\_account\_namespace](#input\_azwi\_service\_account\_namespace) | Kubernetes namespace for the Azure Workload Identity service account | `string` | `"external-secrets-operator"` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment name (qa, prod) | `string` | n/a | yes |
+| <a name="input_oidc_rg"></a> [oidc\_rg](#input\_oidc\_rg) | OIDC issuer resource group name | `string` | n/a | yes |
 | <a name="input_oidc_rg_location"></a> [oidc\_rg\_location](#input\_oidc\_rg\_location) | OIDC issuer resource group location | `string` | `"West Europe"` | no |
+| <a name="input_oidc_storage_account"></a> [oidc\_storage\_account](#input\_oidc\_storage\_account) | OIDC issuer storage account name | `string` | n/a | yes |
 | <a name="input_oidc_storage_container"></a> [oidc\_storage\_container](#input\_oidc\_storage\_container) | OIDC issuer storage container name | `string` | `"$web"` | no |
+| <a name="input_workload_identity_public_key_pem"></a> [workload\_identity\_public\_key\_pem](#input\_workload\_identity\_public\_key\_pem) | Workload identity service account public key in PEM format | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_application_id"></a> [application\_id](#output\_application\_id) | The application ID |
+| <a name="output_application_object_id"></a> [application\_object\_id](#output\_application\_object\_id) | The application object ID (used for federated credentials) |
 | <a name="output_key_vault_id"></a> [key\_vault\_id](#output\_key\_vault\_id) | The ID of the Azure Key Vault |
 | <a name="output_key_vault_name"></a> [key\_vault\_name](#output\_key\_vault\_name) | The name of the Azure Key Vault |
 | <a name="output_oidc_issuer_uri"></a> [oidc\_issuer\_uri](#output\_oidc\_issuer\_uri) | The OIDC issuer URI |
